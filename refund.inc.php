@@ -5,15 +5,15 @@
 global $_GPC,$_W;
         $uniacid=$_W['uniacid'];
 		$orderid=$_GPC['id'];
-		$refund_code=$_GET['refund_code'];            //退款用单号
-		$pay_fee=$_GET['pay_fee'];					  //总金额
-		require_once 'refundfunction.php';
+		$refund_code=$_GET['shop_refund_code'];            //退款用单号——
+		$pay_fee=$_GET['shop_pay_fee'];					  //总金额
+		require_once './refundfunction.php';
 		$business_data=pdo_get('shop_business',array('uniacid'=>$uniacid),array());
-		$appid=$business_data['appid'];
-		$mch_id=$business_data['business_num'];
-		$key=$business_data['pay_key'];
-		$total_fee=floatval($_GET['pay_fee']*100);    //付款金额
-		$refund_fee=floatval($_GET['pay_fee']*100);	  //退款金额
+		$appid=$business_data['shop_appid'];
+		$mch_id=$business_data['shop_business_num'];
+		$key=$business_data['shop_pay_key'];
+		$total_fee=floatval($_GET['fee']*100);    //付款金额
+		$refund_fee=floatval($_GET['fee']*100);	  //退款金额
 		$noce_str=time().'ringwerwe';				  //单号
 		$noce_str = md5($noce_str);					  //加密
 		$out_refund_no=time().rand(0,100)*66;		 
