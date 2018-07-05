@@ -4,7 +4,7 @@ defined('IN_IA') or exit('Access Denied');
 global $_GPC,$_W;
 $uniacid=$_W['uniacid'];
 $op = array('classify','general','sale','price_high','price_low','classify_son');
-$op = in_array($_GPC['op'],$op)  ?  $_GPC['op'] :  '';
+$op = in_array($_GPC['option'],$op)  ?  $_GPC['option'] :  '';
 
 $page=$_GPC['page'];
 $pagelist = 8;
