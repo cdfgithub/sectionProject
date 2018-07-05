@@ -1,12 +1,10 @@
 <?php
-/*改代码仅供学习，不可用于商业用途
- *
- * */
+/*该代码请勿商用*/
 defined('IN_IA') or exit('Access Denied');
 global $_GPC,$_W;
 	$uniacid=$_W['uniacid'];
 	$op=array('select','save','delete');
-	$op=in_array($_GPC['op'],$op) ? $_GPC['op'] : 'select';
+	$op=in_array($_GPC['option'],$op) ? $_GPC['option'] : 'select';
 	switch($op){
 		case 'select':
 			$result=pdo_getall('shop_order',array('zf_starts'=>0,'uniacid'=>$uniacid),array('id','address'));  //未支付订单
