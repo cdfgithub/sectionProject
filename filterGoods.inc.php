@@ -1,13 +1,11 @@
 <?php
-/*改代码仅供学习，不可用于商业用途
- *
- * */
+/*该代码请勿商用*/
 defined('IN_IA') or exit ('Access Denied');
 global $_GPC,$_W;
 $uniacid=$_W['uniacid'];
 $op=array('general','sale','price_high','price_low');
 
-$op=in_array($_GPC['op'],$op) ? $_GPC['op'] : '';
+$op=in_array($_GPC['option'],$op) ? $_GPC['option'] : '';
     $page=$_GPC['page'];
     $pagelist = 8;
     if($page==1){
