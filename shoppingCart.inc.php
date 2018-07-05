@@ -1,14 +1,12 @@
 <?php
-/*改代码仅供学习，不可用于商业用途
- *
- * */
+/*该代码请勿商用*/
 defined('IN_IA') or exit('Access Denied');
 global $_GPC,$_W;
 $uniacid=$_W['uniacid'];
 $sid=$_GPC['id'];
 $openid=$_GPC['openid'];
 $op=array('ginsert','gdelete','zf');
-$op=in_array($_GPC['op'],$op)?$_GPC['op']:'ginsert';
+$op=in_array($_GPC['option'],$op)?$_GPC['option']:'ginsert';
 	switch($op){
 		case 'ginsert':
 		    $is_add_cart=pdo_get('shop_shoppingcart',array('s_id'=>$sid,'openid'=>$openid,'uniacid'=>$uniacid),array('number'));
