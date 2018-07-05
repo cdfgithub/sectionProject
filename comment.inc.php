@@ -1,7 +1,5 @@
 <?php
-/*改代码仅供学习，不可用于商业用途
- *
- * */
+/*该代码请勿商用*/
 defined('IN_IA') or exit('Access Denied');
 global $_GPC,$_W;
     $res=pdo_insert('shop_comments',array('g_id'=>$_GPC['g_id'],'o_id'=>$_GPC['o_id'],'content'=>$_GPC['content'],'score'=>$_GPC['score'],'uniacid'=>$_W['uniacid'],'openid'=>$_GPC['openid']));
