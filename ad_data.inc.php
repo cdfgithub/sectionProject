@@ -1,4 +1,5 @@
 <?php
+/*该代码请勿商用*/
 defined('IN_IA') or exit('Access Denied');
 global $_GPC,$_W;
 $uniacid=$_W['uniacid'];
