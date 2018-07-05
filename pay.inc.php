@@ -1,8 +1,8 @@
 <?php
-/*改代码仅供学习，不可用于商业用途
+/*该代码仅供学习，不可用于商业用途
  *
  * */
-//defined('IN_IA') or exit ('Access Denied');
+defined('IN_IA') or exit ('Access Denied');
 global  $_GPC,$_W;
 $uniacid=$_W['uniacid'];
 require_once 'wxpay.class.php';
