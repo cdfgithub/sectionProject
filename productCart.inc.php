@@ -1,13 +1,11 @@
 <?php
-/*改代码仅供学习，不可用于商业用途
- *
- * */
+/*该代码请勿商用*/
 defined('IN_IA') or exit ('Access Denied');
 global  $_GPC,$_W;
 $uniacid=$_W['uniacid'];
 $op=array('cartlist','c_delete_all','c_delete_one','add_num','reduce_num');
 
-$op=in_array($_GPC['op'],$op) ? $_GPC['op'] :'';
+$op=in_array($_GPC['option'],$op) ? $_GPC['option'] :'';
     $page=$_GPC['page'];
     $pagelist = 10;
     if($page==1){
