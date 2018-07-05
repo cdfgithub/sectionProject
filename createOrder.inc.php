@@ -6,7 +6,7 @@ defined('IN_IA') or exit ('Access Denied');
 global  $_GPC,$_W;
 $uniacid=$_W['uniacid'];
 $op=array('pay_success','pay_fail','pay_num','cart_pay_success','cart_pay_fail','success_change_status','fail_change_status');
-$op=in_array($_GPC['op'],$op) ? $_GPC['op']: '';
+$op=in_array($_GPC['option'],$op) ? $_GPC['option']: '';
 switch($op) {
     case 'pay_success':
         $order_num = time() . rand(0, 9);
