@@ -1,8 +1,6 @@
 <?php
 
-/*改代码仅供学习，不可用于商业用途
- *
- * */
+/*该代码请勿商用*/
 //京东物流接口
 defined('IN_IA') or exit('Access Denied');
 global $_GPC,$_W;
